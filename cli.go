@@ -15,7 +15,7 @@ import (
 	"os"
 	"runtime"
 	"strings"
-	"suncordinstaller/buildinfo"
+	"veeecordinstaller/buildinfo"
 
 	"github.com/fatih/color"
 	"github.com/manifoldco/promptui"
@@ -47,9 +47,9 @@ func main() {
 	var helpFlag = flag.Bool("help", false, "View usage instructions")
 	var versionFlag = flag.Bool("version", false, "View the program version")
 	var updateSelfFlag = flag.Bool("update-self", false, "Update me to the latest version")
-	var installFlag = flag.Bool("install", false, "Install Suncord")
-	var updateFlag = flag.Bool("repair", false, "Repair Suncord")
-	var uninstallFlag = flag.Bool("uninstall", false, "Uninstall Suncord")
+	var installFlag = flag.Bool("install", false, "Install VeeeCord")
+	var updateFlag = flag.Bool("repair", false, "Repair VeeeCord")
+	var uninstallFlag = flag.Bool("uninstall", false, "Uninstall VeeeCord")
 	var installOpenAsarFlag = flag.Bool("install-openasar", false, "Install OpenAsar")
 	var uninstallOpenAsarFlag = flag.Bool("uninstall-openasar", false, "Uninstall OpenAsar")
 	var locationFlag = flag.String("location", "", "The location of the Discord install to modify")
@@ -62,8 +62,8 @@ func main() {
 	}
 
 	if *versionFlag {
-		fmt.Println("Suncord Installer Cli", buildinfo.InstallerTag, "("+buildinfo.InstallerGitHash+")")
-		fmt.Println("Copyright (C) 2024 verticalsync and Suncord contributors")
+		fmt.Println("VeeeCord Installer Cli", buildinfo.InstallerTag, "("+buildinfo.InstallerGitHash+")")
+		fmt.Println("Copyright (C) 2024 VeeeCord contributors")
 		fmt.Println("License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.")
 		return
 	}
@@ -100,18 +100,18 @@ func main() {
 			<-SelfUpdateCheckDoneChan
 			if IsSelfOutdated {
 				Log.Warn("Your installer is outdated.")
-				Log.Warn("To update, select the 'Update Suncord Installer' option to update, or run with --update-self")
+				Log.Warn("To update, select the 'Update VeeeCord Installer' option to update, or run with --update-self")
 			}
 		}()
 
 		choices := []string{
-			"Install Suncord",
-			"Repair Suncord",
-			"Uninstall Suncord",
+			"Install VeeeCord",
+			"Repair VeeeCord",
+			"Uninstall VeeeCord",
 			"Install OpenAsar",
 			"Uninstall OpenAsar",
 			"View Help Menu",
-			"Update Suncord Installer",
+			"Update VeeeCord Installer",
 			"Quit",
 		}
 		_, choice, err := (&promptui.Select{
@@ -126,7 +126,7 @@ func main() {
 			return
 		case "Quit":
 			return
-		case "Update Suncord Installer":
+		case "Update VeeeCord Installer":
 			if err := UpdateSelf(); err != nil {
 				Log.Error("Failed to update self:", err)
 				exitFailure()
@@ -144,7 +144,7 @@ func main() {
 	} else if uninstall {
 		errSilent = PromptDiscord("unpatch", *locationFlag, *branchFlag).unpatch()
 	} else if update {
-		Log.Info("Downloading latest Suncord files...")
+		Log.Info("Downloading latest VeeeCord files...")
 		err := installLatestBuilds()
 		Log.Info("Done!")
 		if err == nil {
@@ -274,5 +274,5 @@ func HandleScuffedInstall() {
 	fmt.Println("Hold On!")
 	fmt.Println("You have a broken Discord Install.")
 	fmt.Println("Please reinstall Discord before proceeding!")
-	fmt.Println("Otherwise, Suncord will likely not work.")
+	fmt.Println("Otherwise, VeeeCord will likely not work.")
 }

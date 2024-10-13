@@ -22,15 +22,15 @@ var FilesDirErr error
 var Patcher string
 
 func init() {
-	if dir := os.Getenv("SUNCORD_USER_DATA_DIR"); dir != "" {
-		Log.Debug("Using SUNCORD_USER_DATA_DIR")
+	if dir := os.Getenv("VEEECORD_USER_DATA_DIR"); dir != "" {
+		Log.Debug("Using VEEECORD_USER_DATA_DIR")
 		BaseDir = dir
 	} else if dir = os.Getenv("DISCORD_USER_DATA_DIR"); dir != "" {
-		Log.Debug("Using DISCORD_USER_DATA_DIR/../SuncordData")
-		BaseDir = path.Join(dir, "..", "SuncordData")
+		Log.Debug("Using DISCORD_USER_DATA_DIR/../VeeeCordData")
+		BaseDir = path.Join(dir, "..", "VeeeCordData")
 	} else {
 		Log.Debug("Using UserConfig")
-		BaseDir = appdir.New("Suncord").UserConfig()
+		BaseDir = appdir.New("VeeeCord").UserConfig()
 	}
 	FilesDir = path.Join(BaseDir, "dist")
 	if !ExistsFile(FilesDir) {

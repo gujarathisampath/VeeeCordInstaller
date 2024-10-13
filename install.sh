@@ -13,14 +13,14 @@ echo "Downloading Installer..."
 
 set -- "XDG_CONFIG_HOME=$XDG_CONFIG_HOME"
 
-curl -sS https://github.com/verticalsync/SuncordInstaller/releases/latest/download/SuncordInstallerCli-Linux \
+curl -sS https://github.com/gujarathisampath/VeeeCordInstaller/releases/latest/download/VeeeCordInstallerCli-Linux \
   --output "$outfile" \
   --location
 
 chmod +x "$outfile"
 
 echo
-echo "Now running SuncordInstaller"
+echo "Now running VeeeCordInstaller"
 echo "Do you want to run as root? [Y|n]"
 echo "This is necessary if Discord is in a root owned location like /usr/share or /opt"
 printf "> "

@@ -1,4 +1,4 @@
-module suncordinstaller
+module veeecordinstaller
 
 go 1.20
 

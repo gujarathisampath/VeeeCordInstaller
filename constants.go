@@ -8,13 +8,13 @@ package main
 
 import (
 	"image/color"
-	"suncordinstaller/buildinfo"
+	"veeecordinstaller/buildinfo"
 )
 
-const ReleaseUrl = "https://api.github.com/repos/verticalsync/Suncord/releases/latest"
-const InstallerReleaseUrl = "https://api.github.com/repos/verticalsync/SuncordInstaller/releases/latest"
+const ReleaseUrl = "https://api.github.com/repos/gujarathisampath/VeeeCord/releases/latest"
+const InstallerReleaseUrl = "https://api.github.com/repos/gujarathisampath/VeeeCordInstaller/releases/latest"
 
-var UserAgent = "suncordinstaller/" + buildinfo.InstallerGitHash + " (https://github.com/verticalsync/SuncordInstaller)"
+var UserAgent = "suncordinstaller/" + buildinfo.InstallerGitHash + " (https://github.com/gujarathisampath/VeeeCordInstaller)"
 
 var (
 	DiscordGreen  = color.RGBA{R: 0x2D, G: 0x7C, B: 0x46, A: 0xFF}

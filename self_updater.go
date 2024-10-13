@@ -14,8 +14,8 @@ import (
 	"os"
 	"path"
 	"runtime"
-	"suncordinstaller/buildinfo"
 	"time"
+	"veeecordinstaller/buildinfo"
 )
 
 var IsSelfOutdated = false
@@ -46,15 +46,15 @@ func init() {
 }
 
 func GetInstallerDownloadLink() string {
-	const BaseUrl = "https://github.com/verticalsync/SuncordInstaller/releases/latest/download/"
+	const BaseUrl = "https://github.com/gujarathisampath/VeeeCordInstaller/releases/latest/download/"
 	switch runtime.GOOS {
 	case "windows":
-		filename := Ternary(buildinfo.UiType == buildinfo.UiTypeCli, "SuncordInstallerCli.exe", "SuncordInstaller.exe")
+		filename := Ternary(buildinfo.UiType == buildinfo.UiTypeCli, "VeeeCordInstallerCli.exe", "VeeeCordInstaller.exe")
 		return BaseUrl + filename
 	case "darwin":
-		return BaseUrl + "SuncordInstaller.MacOS.zip"
+		return BaseUrl + "VeeeCordInstaller.MacOS.zip"
 	case "linux":
-		return BaseUrl + "SuncordInstallerCli-linux"
+		return BaseUrl + "VeeeCordInstallerrCli-linux"
 	default:
 		return ""
 	}
@@ -90,7 +90,7 @@ func UpdateSelf() error {
 	}
 	defer res.Body.Close()
 
-	tmp, err := os.CreateTemp(ownExeDir, "SuncordInstallerUpdate")
+	tmp, err := os.CreateTemp(ownExeDir, "VeeeCordInstallerUpdate")
 	if err != nil {
 		return fmt.Errorf("Failed to create tempfile: %w", err)
 	}

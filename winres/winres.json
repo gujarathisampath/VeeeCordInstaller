@@ -9,7 +9,7 @@
   "RT_MANIFEST": {
     "#1": {
       "0409": {
-        "description": "An Installer for the Suncord Discord Mod",
+        "description": "An Installer for the VeeeCord Discord Mod",
         "minimum-os": "win10",
         "execution-level": "as invoker",
         "dpi-awareness": "system"
@@ -22,10 +22,10 @@
         "info": {
           "0409": {
             "Comments": "Comments",
-            "CompanyName": "Suncord",
-            "FileDescription": "Suncord Installer",
-            "LegalCopyright": "© 2024 verticalsync and Suncord Contributors - GPL3.0",
-            "ProductName": "Suncord Installer",
+            "CompanyName": "VeeeCord",
+            "FileDescription": "VeeeCord Installer",
+            "LegalCopyright": "© 2024 verticalsync and VeeeCord Contributors - GPL3.0",
+            "ProductName": "VeeeCord Installer",
             "ProductVersion": ""
           }
         }
